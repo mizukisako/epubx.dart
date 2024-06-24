@@ -98,9 +98,9 @@ class EpubReader {
   static Future<EpubContent> readContent(EpubContentRef contentRef) async {
     var result = EpubContent();
     result.Html = await readTextContentFiles(contentRef.Html!);
-    result.Css = await readTextContentFiles(contentRef.Css!);
+    // result.Css = await readTextContentFiles(contentRef.Css!);
     result.Images = await readByteContentFiles(contentRef.Images!);
-    result.Fonts = await readByteContentFiles(contentRef.Fonts!);
+    // result.Fonts = await readByteContentFiles(contentRef.Fonts!);
     result.AllFiles = <String, EpubContentFile>{};
 
     result.Html!.forEach((String? key, EpubTextContentFile value) {
